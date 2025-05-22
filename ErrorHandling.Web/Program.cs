@@ -10,8 +10,9 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddControllersWithViews();
         builder.Services.AddTransient<SlowService>();
+        
         var app = builder.Build();
-
+        app.UseStaticFiles();
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/error/exception");

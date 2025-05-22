@@ -3,9 +3,32 @@
     <html>
     <head>
         <title>HTTP Error</title>
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
-    <h1>Ooops.. </h1>
-    <h2>HTTP Error: @Model</h2>
+    <div class="stars"></div>
+    <div class="scanlines"></div>
+
+    <div class="ufo" onclick="showEasterEgg()">
+        <div class="beam"></div>
+    </div>
+
+    <div class="content">
+        <h1 class="glitch">404</h1>
+        <p>Oops! Sidan finns inte – kanske blev den uppstrålad av ett UFO 🛸</p>
+        <p><a href="/">🚀 Tillbaka till startsidan</a></p>
+    </div>
+
+    <div id="easter-egg-message">👽 Du hittade påskägget! Aliens hälsar: "Humans are weird."</div>
+
+    <script>
+        function showEasterEgg() {
+            const msg = document.getElementById("easter-egg-message");
+            msg.style.display = "block";
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 5000);
+        }
+    </script>
     </body>
     </html>
