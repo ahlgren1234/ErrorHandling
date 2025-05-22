@@ -1,3 +1,6 @@
+﻿
+using ErrorHandling.Web.Services;
+
 namespace ErrorHandling.Web;
 
 public class Program
@@ -6,6 +9,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddControllersWithViews();
+        builder.Services.AddTransient<SlowService>();
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())
