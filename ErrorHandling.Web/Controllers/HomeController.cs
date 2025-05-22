@@ -10,4 +10,10 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet("/throw")]
+    public IActionResult Throw()
+    {
+        throw new Exception("Detta är ett testfel!");
+    }
+
 }
